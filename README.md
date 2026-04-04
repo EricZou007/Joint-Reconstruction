@@ -1,6 +1,46 @@
 # Joint-Reconstruction
 
-This is the code for multimodal X-ray ptychography and fluorescence reconstruction. All the code is implemented using Matlab and run on the Truncated Newton optimizer. 
+This repository contains the MATLAB implementation for **multimodal X-ray ptychography and fluorescence reconstruction**.  
+All experiments are carried out in MATLAB and optimized using the **Truncated Newton (TN)** method.
+
+## Reproducing the Experimental Results
+
+To reproduce the results reported in the paper, please follow the steps below.
+
+### 1. Data Generation
+
+Generate the simulated datasets using the following scripts:
+
+- `data_generation.m`  
+  Generates the **phantom simulation dataset**.
+
+- `data_generation_cameraman.m`  
+  Generates the **Cameraman/Baboon dataset**.
+
+### 2. Image Reconstruction Experiments
+
+Run the reconstruction scripts below to reproduce the main experimental results:
+
+- `recon_image_compare.m`  
+  Reproduces the reconstruction results for the **phantom simulation dataset**.
+
+- `recon_image_compare_cameraman.m`  
+  Reproduces the reconstruction results for the **Cameraman/Baboon dataset**.
+
+### 3. Gradient and Hessian Analysis
+
+Additional scripts are provided for verification and analysis of the optimization model:
+
+- `gradient_test_true_point.m`  
+  Evaluates the gradient at the **ground-truth point**.
+
+- `loss_exact_hessian_formation.m`  
+  Computes the **exact Hessian** and analyzes the **loss surface**.
+
+## Notes
+
+Please make sure all required data files and dependencies are properly configured before running the scripts.  
+For best reproducibility, we recommend running the experiments in the same MATLAB environment and with the same optimizer settings used in the paper.
 
 
 
