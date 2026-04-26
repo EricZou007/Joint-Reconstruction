@@ -1,4 +1,4 @@
-N_obj= 600;
+N_obj= 700;
 O=phantom3d(N_obj);
 
 Ne = 1;
@@ -12,10 +12,10 @@ O=O(:,:,channel);
 Zi = sum(O,3); % switch Zi and Zr position here
 object_true=Zr+1i*Zi;
 
-N_scans_x = 10; % number of scan we have is n_scan_x^2
+N_scans_x = 12; % number of scan we have is n_scan_x^2
 dd=1;
-N = (8/dd)^2;   
-stepSize_true = 3e-7; %scan step size
+N = (10/dd)^2;   
+stepSize_true = 5e-7; %scan step size
 Nc_avg = 1000; % determine the noise; if inf, then no noise if want noise 10^6
 
 sim_pty_step_scan;
@@ -34,7 +34,7 @@ p = probe_true;
 Np=size(p,1);
 d=[];
 
-Nc_avg_fluor = 3e5; % 1e7 -> 0.5% noise 3e6 -> 1% noise 3e5 -> 3% noise 3e4 -> 10% noise
+Nc_avg_fluor = 4e5; % 1e7 -> 0.5% noise 3e6 -> 1% noise 3e5 -> 3% noise 3e4 -> 10% noise
 
 w_true = (( max(O, 0) ));
 
@@ -104,8 +104,8 @@ if ~exist('data_Eric/Np_'+string(Np),"dir")
 end
 
 
-% save(['data_Eric/Np',num2str(Np),'_multimodal_',num2str(Ne),'_',num2str(stepSize_true),'_',num2str(N_scan),'_N_obj',num2str(N_obj),'_noise',num2str(Nc_avg),'_aperiodic.mat'],...
-%      'd','O','Zr','dp','ppX','ppY','dx','probe_true','obj','-v7.3');
+save(['data_Eric/Np',num2str(Np),'_multimodal_',num2str(Ne),'_',num2str(stepSize_true),'_',num2str(N_scan),'_N_obj',num2str(N_obj),'_noise',num2str(Nc_avg),'_aperiodic.mat'],...
+     'd','O','Zr','dp','ppX','ppY','dx','probe_true','obj','-v7.3');
 
 
 %%

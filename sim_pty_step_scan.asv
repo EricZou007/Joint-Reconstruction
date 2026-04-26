@@ -12,7 +12,7 @@ maxPosError = 1; %largest randrom position error
 %Nc_avg = inf; %average photon count per detector pixel. For poisson noise, SNR = sqrt(Nc_avg);
 % Nc_avg = 10^6;
 
-Ls = N*1e-6/dd; %determine probe size % out of focus % Ls = N*1e-6/dd
+Ls = N*1e-4/dd; %determine probe size % out of focus % 
 
 % Ls = 0; % at focus
 

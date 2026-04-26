@@ -79,7 +79,9 @@ for i=1:N_scan
     Pj=sparse(Np^2,N_obj^2);
     for k=1:Np^2
         Pj(k,vecInd(k))=probe(k); %P_j
+        
     end
+
 
     dp_j = dp(:,:,i);
     
@@ -87,6 +89,7 @@ for i=1:N_scan
     psi_old = Pj*z;
     psi = F*(Pj*z);
 
+   
   
 
     absp = abs(psi(:))+0e-6;

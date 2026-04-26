@@ -1,4 +1,4 @@
-global NF fiter maxiter itertest
+
 global N Np Ne N_obj
 global H_init
 global beta1 thres
@@ -7,10 +7,10 @@ global fctn_f
 
 %% Load the true data
 
-N_probe = 64;  % 16, 32, 66, 1e-7
-N_scan =100;
-N_obj_size =334;
-stepSize = 3e-7;
+N_probe = 100;  % 16, 32, 66, 1e-7
+N_scan = 144;
+N_obj_size =650;
+stepSize = 5e-7;
 Nc_avg =inf;
 eig_val_need = 0;
 true_value = 0;
@@ -30,7 +30,7 @@ p = probe_true;
 %% Load the noise measurement reconstructed data
 
 
-Nc_avg = 10000;
+Nc_avg = 1000;
 
 
 
@@ -74,6 +74,7 @@ fctn_f = @(o) func_conv_o(o, p, d);
 f_tot_joint = [];
 f_tot_joint_ptyc = [];
 f_tot_joint_fluor = [];
+f_tot_ptyo = [];
 mse_joint = [];
 gradient_joint = [];
 mse_joint_imag = [];
@@ -82,7 +83,7 @@ mse_joint_real = [];
 outermax = 1;
 
 
-iter = 10;
+iter = 100;
 
 
 iter_joint = iter;
@@ -131,9 +132,6 @@ mse_ptyo_real = [];
 mse_ptyo_imag = [];
 gradient_ptyo = [];
 iter_ptyo = iter;
-
- f_tot_ptyo =[];
-
 maxiter = iter_ptyo;
 outermax = 1;
 separate_loss = 1;

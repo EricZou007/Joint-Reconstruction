@@ -53,7 +53,8 @@ for i=indices;
             P(k1,vecInd(k1))=probe(k1);
         end
         cmp1=P'*P;
-        dpv=dp(:,:,i);dpv=dpv(:);
+        dpv=dp(:,:,i);
+        dpv=dpv(:);
         cmp23=cmp2.^3;
 
 
