@@ -49,7 +49,7 @@ For best reproducibility, we recommend running the experiments in the same MATLA
 
 Joint Reconstruction code is developed by:
 
-- Chengru Zou (<eric.zou@emory.edu>)
+- Chengru Eric Zou (<eric.zou@emory.edu>)
 - Yuanzhe Xi (<yuanzhe.xi@emory.edu>)
 - Zichao Wendy Di(<wendydi@mcs.anl.gov>)
 
