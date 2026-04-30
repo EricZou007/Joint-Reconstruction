@@ -53,7 +53,7 @@ Joint Reconstruction code is developed by:
 - Yuanzhe Xi (<yuanzhe.xi@emory.edu>)
 - Zichao Wendy Di(<wendydi@mcs.anl.gov>)
 
-We welcome your questions. Please contact **Chengru Zou** specifically for questions related to package usage, features, and development.
+We welcome your questions. Please contact **Chengru Eric Zou** specifically for questions related to package usage, features, and development.
 
 ## Citation
 
