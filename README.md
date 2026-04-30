@@ -27,7 +27,7 @@ Run the reconstruction scripts below to reproduce the main experimental results:
 - `recon_image_compare_cameraman.m`  
   Reproduces the reconstruction results for the **Cameraman/Baboon dataset**.
 
-  - `multiple_ne_comparison.m`  
+- `multiple_ne_comparison.m`  
   Reproduces the reconstruction results for the **multiple element maps dataset**.
 
 ### 3. Gradient and Hessian Analysis
